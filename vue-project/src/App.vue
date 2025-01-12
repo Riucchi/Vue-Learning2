@@ -1,21 +1,19 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import  CounterButton  from './components/CounterButton.vue';
+import PlanPicker from './components/PlanPicker.vue';
+
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+<div class="content">
+<h1 class=title>Coffe Shop</h1>
+<h2 class="subtitle">The best coffee in town</h2>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+<PlanPicker></PlanPicker>
+</div>
 </template>
+
 
 <style scoped>
 header {
