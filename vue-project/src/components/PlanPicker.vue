@@ -1,6 +1,7 @@
 <script setup>
 import CoffeePlan from './CoffeePlan.vue';
-import {ref} from 'vue';
+import {ref, onMounted, onUnmounted} from 'vue';
+
 
 const plans = ref(['Eficent', 'Magnificent', 'Extraordinary', 'Incredible']);
 
@@ -8,11 +9,18 @@ const selectedCoffeePlan = ref();
 
 function handleSelectCoffeePlan(name){
     selectedCoffeePlan.value = name;
+};
 
-}
+onMounted(() => {
+  console.log(plansWrapper.value);
+});
+
+const plansWrapper = ref();
+
+
 </script>
 <template>
-<div class="plans">
+<div ref="plansWrapper" class="plans">
     {{ selectedCoffeePlan }}
   <CoffeePlan v-for="plan in plans" 
   :key="plan" 

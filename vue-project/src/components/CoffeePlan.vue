@@ -4,11 +4,7 @@ import {ref} from 'vue';
 const props = defineProps({
     name: {
         type: String,
-        default:'Default Plan',
-        validator(value){
-            value.startsWith('Eficent') ? true : false;
-        }
-    },
+        default:'Default Plan'},
     selected: {
         type: Boolean,
         default: false
